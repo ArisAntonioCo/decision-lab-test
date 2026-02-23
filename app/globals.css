@@ -48,6 +48,23 @@
 }
 
 :root {
+  --app-bg: #f2ede2;
+  --app-surface: #ece8de;
+  --app-surface-raised: #f4f1ea;
+  --app-chrome: #dbd4c5;
+  --app-border: #9f9789;
+  --app-border-strong: #8f887b;
+  --app-text: #3f3a32;
+  --app-muted: #6f685e;
+  --app-brand: #cf5c39;
+  --app-brand-strong: #5e83d2;
+  --panel-mint: #96cdbf;
+  --panel-peach: #d9a085;
+  --panel-lilac: #b4aedb;
+  --panel-gold: #e8bf63;
+  --panel-blue: #98b9e5;
+  --panel-neutral: #d8d4ca;
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -83,6 +100,23 @@
 }
 
 .dark {
+  --app-bg: #1d1a17;
+  --app-surface: #2a2621;
+  --app-surface-raised: #312c26;
+  --app-chrome: #3b342c;
+  --app-border: #4e473f;
+  --app-border-strong: #5f564b;
+  --app-text: #f3efe7;
+  --app-muted: #ccc2b3;
+  --app-brand: #ef9f60;
+  --app-brand-strong: #8ab0ff;
+  --panel-mint: #4d7a6f;
+  --panel-peach: #815745;
+  --panel-lilac: #655f86;
+  --panel-gold: #8f7335;
+  --panel-blue: #4f678a;
+  --panel-neutral: #5b564f;
+
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);

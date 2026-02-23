@@ -1,20 +1,21 @@
 import type { ReactNode } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 type PanelTone = "mint" | "peach" | "lilac" | "gold" | "blue" | "neutral";
 
 const toneClass: Record<PanelTone, string> = {
-  mint: "bg-[#96cdbf]",
-  peach: "bg-[#d9a085]",
-  lilac: "bg-[#b4aedb]",
-  gold: "bg-[#e8bf63]",
-  blue: "bg-[#98b9e5]",
-  neutral: "bg-[#d8d4ca]",
+  mint: "bg-[var(--panel-mint)]",
+  peach: "bg-[var(--panel-peach)]",
+  lilac: "bg-[var(--panel-lilac)]",
+  gold: "bg-[var(--panel-gold)]",
+  blue: "bg-[var(--panel-blue)]",
+  neutral: "bg-[var(--panel-neutral)]",
 };
 
 type DashboardPanelProps = {
-  title: string;
+  title: ReactNode;
+  titleIcon?: ReactNode;
   tone?: PanelTone;
   headerRight?: ReactNode;
   className?: string;
@@ -23,6 +24,7 @@ type DashboardPanelProps = {
 
 export function DashboardPanel({
   title,
+  titleIcon,
   tone = "neutral",
   headerRight,
   className,
@@ -31,20 +33,24 @@ export function DashboardPanel({
   return (
     <Card
       variant="flat"
-      className={cn("overflow-hidden border-[#9c9588] bg-[#f8f5ed]", className)}
+      className={cn(
+        "gap-0 py-0 overflow-hidden rounded-none border-[var(--app-border)] bg-[var(--app-surface-raised)]",
+        className
+      )}
     >
-      <CardHeader
+      <div
         className={cn(
-          "flex h-7 flex-row items-center justify-between border-b border-[#9c9588] px-2 py-0",
+          "flex h-12 min-w-0 flex-row items-center justify-between rounded-none border-b border-[var(--app-border)] px-3 py-0",
           toneClass[tone]
         )}
       >
-        <CardTitle className="text-[10px] leading-none font-semibold text-[#3f3a32]">
-          {title}
-        </CardTitle>
-        {headerRight}
-      </CardHeader>
-      <CardContent className="p-2">{children}</CardContent>
+        <h3 className="flex min-w-0 items-center gap-2 text-base leading-none font-semibold text-[var(--app-text)]">
+          {titleIcon}
+          <span>{title}</span>
+        </h3>
+        {headerRight ? <div className="shrink-0 pl-2">{headerRight}</div> : null}
+      </div>
+      <CardContent className="px-2 pt-3 pb-2">{children}</CardContent>
     </Card>
   );
 }

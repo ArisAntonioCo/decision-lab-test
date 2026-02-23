@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
+import { SidebarLogo } from "@/components/ui/sidebar-logo";
 import { cn } from "@/lib/utils";
 
 export type ShellNavItem = {
@@ -36,11 +37,8 @@ export function DashboardShell({
     <div className="h-screen w-screen bg-[#1b1b1b]">
       <div className="flex h-full w-full border border-[#2e2a24] bg-[#ece8de]">
         <aside className="w-[148px] border-r border-[#8f887b] bg-[#e5dfd0]">
-          <div className="flex h-10 items-center gap-1 border-b border-[#a8a091] px-3">
-            <div className="h-4 w-4 rounded-[2px] bg-[linear-gradient(135deg,#5e83d2_0%,#5e83d2_45%,#ef9f60_45%,#ef9f60_100%)]" />
-            <span className="text-[10px] font-semibold tracking-wide text-[#cf5c39] uppercase">
-              Redpoint
-            </span>
+          <div className="flex h-10 items-center border-b border-[#a8a091] px-3">
+            <SidebarLogo className="h-5" />
           </div>
 
           <div className="p-2">
