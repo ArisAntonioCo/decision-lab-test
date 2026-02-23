@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type SidebarLogoProps = {
@@ -6,10 +7,12 @@ type SidebarLogoProps = {
 
 export function SidebarLogo({ className }: SidebarLogoProps) {
   return (
-    <img
+    <Image
       src="/logos/redpoint-sidebar-logo.svg"
       alt="Redpoint logo"
-      className={cn("h-4 w-auto object-contain", className)}
+      width={165}
+      height={20}
+      className={cn("h-5 w-auto object-contain", className)}
     />
   );
 }

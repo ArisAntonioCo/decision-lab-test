@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { SidebarLogo } from "@/components/ui/sidebar-logo";
 import { cn } from "@/lib/utils";
 import { dashboardNavItems } from "../_lib/dashboard-data";
 
@@ -46,8 +47,8 @@ export function AppShell({ children }: AppShellProps) {
       <div className="flex h-full w-full overflow-hidden border border-[var(--app-border)] bg-[var(--app-surface)]">
         <aside className="hidden w-56 shrink-0 border-r border-[var(--app-border)] bg-[var(--app-surface-raised)] lg:block">
           <div className="flex h-12 items-center gap-2 border-b border-[var(--app-border)] px-4">
-            <div className="h-4 w-4 rounded-[3px] bg-[linear-gradient(135deg,var(--app-brand-strong)_0%,var(--app-brand-strong)_45%,#ef9f60_45%,#ef9f60_100%)]" />
-            <span className="text-xs font-semibold tracking-[0.08em] text-[var(--app-brand)] uppercase">
+            <SidebarLogo />
+            <span className="text-xs font-semibold tracking-[0.08em] text-[#1f1f1f] uppercase">
               Redpoint
             </span>
           </div>
