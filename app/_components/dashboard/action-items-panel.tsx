@@ -1,7 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { Clock3Icon, Trash2Icon } from "lucide-react";
+import {
+  CircleCheckIcon,
+  Clock3Icon,
+  PlusIcon,
+  RefreshCcwIcon,
+  Trash2Icon,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -27,27 +33,50 @@ export function ActionItemsPanel() {
   };
 
   return (
-    <DashboardPanel title="Action Items">
+    <DashboardPanel
+      title={<span className="text-[17px] font-semibold">Action Items</span>}
+      titleIcon={<CircleCheckIcon className="size-4 text-[#1e1d1a]" />}
+      headerRight={
+        <div className="flex items-center gap-1">
+          <Button
+            size="icon-xs"
+            variant="outline"
+            className="size-7 rounded-[4px] border-[var(--app-border-strong)] bg-[var(--app-surface-raised)] hover:bg-[var(--app-chrome)]"
+            aria-label="Add action item"
+          >
+            <PlusIcon className="size-3.5" />
+          </Button>
+          <Button
+            size="icon-xs"
+            variant="outline"
+            className="size-7 rounded-[4px] border-[var(--app-border-strong)] bg-[var(--app-surface-raised)] hover:bg-[var(--app-chrome)]"
+            aria-label="Refresh action items"
+          >
+            <RefreshCcwIcon className="size-3.5" />
+          </Button>
+        </div>
+      }
+    >
       <Tabs defaultValue="active" className="gap-1">
         <TabsList
           variant="line"
-          className="grid h-10 w-full grid-cols-3 items-end gap-0.5 rounded-none border-b border-[var(--app-border)] bg-transparent p-0"
+          className="grid h-8 w-full grid-cols-3 items-end gap-0 rounded-none border-b border-[var(--app-border)] bg-transparent p-0"
         >
           <TabsTrigger
             value="active"
-            className="-mb-px h-9 rounded-t-[10px] border border-[var(--app-border)] border-b-0 bg-[var(--app-surface)] px-3 text-[12px] font-medium text-[var(--app-text)] data-active:bg-[var(--app-surface-raised)] data-active:font-semibold"
+            className="-mb-px h-8 rounded-t-[8px] border border-[var(--app-border)] border-b-0 bg-[var(--app-surface)] px-3 text-[11px] font-medium text-[var(--app-text)] data-active:bg-[var(--app-surface-raised)] data-active:font-semibold"
           >
             Active
           </TabsTrigger>
           <TabsTrigger
             value="past"
-            className="-mb-px h-9 rounded-t-[10px] border border-[var(--app-border)] border-b-0 bg-[var(--app-surface)] px-3 text-[12px] font-medium text-[var(--app-muted)] data-active:bg-[var(--app-surface-raised)] data-active:text-[var(--app-text)] data-active:font-semibold"
+            className="-mb-px h-8 rounded-t-[8px] border border-[var(--app-border)] border-b-0 bg-[var(--app-surface)] px-3 text-[11px] font-medium text-[var(--app-muted)] data-active:bg-[var(--app-surface-raised)] data-active:text-[var(--app-text)] data-active:font-semibold"
           >
             Past
           </TabsTrigger>
           <TabsTrigger
             value="snoozed"
-            className="-mb-px h-9 rounded-t-[10px] border border-[var(--app-border)] border-b-0 bg-[var(--app-surface)] px-3 text-[12px] font-medium text-[var(--app-muted)] data-active:bg-[var(--app-surface-raised)] data-active:text-[var(--app-text)] data-active:font-semibold"
+            className="-mb-px h-8 rounded-t-[8px] border border-[var(--app-border)] border-b-0 bg-[var(--app-surface)] px-3 text-[11px] font-medium text-[var(--app-muted)] data-active:bg-[var(--app-surface-raised)] data-active:text-[var(--app-text)] data-active:font-semibold"
           >
             Snoozed
           </TabsTrigger>
