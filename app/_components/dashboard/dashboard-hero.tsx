@@ -14,7 +14,7 @@ export function DashboardHero() {
           className="h-6 rounded-[4px] border border-[var(--app-border-strong)] bg-[var(--app-surface-raised)] px-2 text-[9px] font-semibold text-[var(--app-text)] hover:bg-[var(--app-chrome)]"
         >
           <PlusIcon className="size-3" />
-          + ADD NEW
+          ADD NEW
         </Button>
       </div>
 
