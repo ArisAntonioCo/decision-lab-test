@@ -1,7 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { ChartNoAxesCombinedIcon, SparklesIcon } from "lucide-react";
+import {
+  ChartNoAxesCombinedIcon,
+  ChevronDownIcon,
+  PlusIcon,
+  SettingsIcon,
+  SparklesIcon,
+} from "lucide-react";
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, XAxis, YAxis } from "recharts";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -50,8 +56,9 @@ export function DashboardScreen() {
         </h1>
         <Button
           size="xs"
-          className="h-7 rounded-[4px] border border-[var(--app-border-strong)] bg-[var(--app-surface-raised)] px-3 text-[10px] font-semibold text-[var(--app-text)] hover:bg-[var(--app-chrome)]"
+          className="h-6 rounded-[4px] border border-[var(--app-border-strong)] bg-[var(--app-surface-raised)] px-2 text-[9px] font-semibold text-[var(--app-text)] hover:bg-[var(--app-chrome)]"
         >
+          <PlusIcon className="size-3" />
           + ADD NEW
         </Button>
       </div>
@@ -80,8 +87,9 @@ export function DashboardScreen() {
                 <Button
                   size="xs"
                   variant="outline"
-                  className="h-10 rounded-[6px] border-[#2d2a24] bg-[#f4f0e8] px-5 text-xs font-semibold tracking-[0.08em] text-[#1e1d1a] shadow-[0_1px_0_0_rgba(0,0,0,0.2)] hover:bg-[#eee8de]"
+                  className="h-8 rounded-[6px] border-[#2d2a24] bg-[#f4f0e8] px-3 text-[10px] font-semibold tracking-[0.08em] text-[#1e1d1a] shadow-[0_1px_0_0_rgba(0,0,0,0.2)] hover:bg-[#eee8de]"
                 >
+                  <SettingsIcon className="size-3.5" />
                   SETTINGS
                 </Button>
               }
@@ -226,6 +234,7 @@ export function DashboardScreen() {
                     className="h-6 rounded-[4px] border-[var(--app-border)] bg-[var(--app-surface-raised)] px-2 py-0 text-[9px] hover:bg-[var(--app-chrome)]"
                   >
                     Repairs & Maintenance
+                    <ChevronDownIcon className="size-3" />
                   </Button>
                   <Button
                     size="xs"
@@ -233,6 +242,7 @@ export function DashboardScreen() {
                     className="h-6 rounded-[4px] border-[var(--app-border)] bg-[var(--app-surface-raised)] px-2 py-0 text-[9px] hover:bg-[var(--app-chrome)]"
                   >
                     Last 3 Months
+                    <ChevronDownIcon className="size-3" />
                   </Button>
                 </div>
               }
