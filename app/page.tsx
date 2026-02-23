@@ -1,5 +1,5 @@
-import { ComponentExample } from "@/components/component-example";
+import { DashboardScreen } from "./_components/dashboard-screen";
 
 export default function Page() {
-return <ComponentExample />;
+  return <DashboardScreen />;
 }
